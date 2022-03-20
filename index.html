@@ -3,6 +3,21 @@
 <head>
     <title>Babbie's first GitHub Pages ...page</title>
     <style>
+        midi-player::part(control-panel) {
+            background: navy;
+            border-radius: 0px;
+            position: fixed;
+            left: 450px;
+            top: 335px;
+            font-family: fantasy;
+            color: yellow;
+            border: 5px dotted;
+        }
+
+        midi-player::part(play-button) {
+            color: yellow;
+        }
+
         * {
             background-color: aliceblue;
             color: dimgrey;
@@ -64,6 +79,10 @@
         <progress value="17" max="100">Loading...</progress>
         Or don't - but please do; Honestly, don't though.
     </div>
+
+    <midi-player src="brutal.mid" sound-font><midi-player>
+    <script
+        src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.4.0"></script>
 </body>
 
 </html>
