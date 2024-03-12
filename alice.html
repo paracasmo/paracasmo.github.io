@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <title>Happy Bday Alice :)</title>
+    <style>
+        body {
+            background: black;
+            font-family: "Arial Black", serif;
+            font-size: 2em;
+        }
+
+        input {
+            font-family: "Arial", serif;
+            font-size: 1em;
+            font-style: italic;
+        }
+
+        .c {
+            flex-direction: column;
+        }
+
+        .q {
+            background: darkgoldenrod;
+            border: 5px dotted black;
+            padding: 0 20px 20px;
+            margin: 20px;
+        }
+
+        .h {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="c">
+    <div class="q" id="x">
+        <h3>Witty A</h3>
+        <label for="xi">This is a very short Q</label><br/>
+        <input id="xi" type="text" oninput="changed('xi','xa','x','y')"/>
+        <span id="xa" class="h">👍 4M</span>
+    </div>
+    <div class="q h" id="y">
+        <h3>Dance Dane Dance</h3>
+        <label for="yi">This is a medium sized Q. It will probably break the layout?</label><br/>
+        <input id="yi" type="text" oninput="changed('yi','ya','y','z')"/>
+        <span id="ya" class="h">🦆 4C</span>
+    </div>
+    <div class="q h" id="z">
+        <h3>Almost there..</h3>
+        <label for="zi">This is a super long Q !!! What if the Q has to be super long and there is no other way to type
+            it? This is what it will look like..</label><br/>
+        <input id="zi" type="text" oninput="changed('zi','za','z', 'final')"/>
+        <span id="za" class="h">❤️ XM</span>
+    </div>
+    <div class="q h" id="final">
+        <h3>The Finale (for now..)</h3>
+        <label for="finali">So.. what if we combine it all: "👍🦆+❤️ Frankfurt"</label><br/>
+        <input id="finali" type="text" oninput="changed('finali','finala','4M4C+XM Frankfurt', 'final')"/>
+        <span id="finala" class="h">🥳 "4M4C+XM Frankfurt" !! I heard Google made its own map coordinate system..</span>
+    </div>
+</div>
+<script>
+    function changed(iId, aId, correctAnswer, nQ) {
+        let typedA = document.getElementById(iId);
+        if (typedA.value.toLowerCase() === correctAnswer.toLowerCase()) {
+            typedA.disabled = 'true';
+            show(aId);
+            show(nQ);
+            final();
+        }
+    }
+
+    function final() {
+        if (Array.from(document.getElementsByClassName('q')).every(x => x.style.opacity === 'unset')) {
+            show('final');
+        }
+    }
+
+    function show(elementId) {
+        document.getElementById(elementId).style.opacity = 'unset';
+    }
+</script>
+</body>
+</html>
