@@ -9,9 +9,16 @@
         }
 
         input {
+            margin-top: 30px;
             font-family: "Arial", serif;
             font-size: 1em;
             font-style: italic;
+            border: 5px dashed darkslategray;
+            color: #146e68;
+        }
+
+        h3 {
+            text-decoration: underline;
         }
 
         .c {
@@ -19,7 +26,8 @@
         }
 
         .q {
-            background: darkgoldenrod;
+            background: goldenrod;
+            font-family: "Arial", serif;
             border: 5px dotted black;
             padding: 0 20px 20px;
             margin: 20px;
@@ -28,34 +36,41 @@
         .h {
             opacity: 0;
         }
+
+        .a {
+            color: forestgreen;
+        }
+
+        .b {
+            color: darkmagenta;
+        }
     </style>
 </head>
 <body>
 <div class="c">
     <div class="q" id="x">
-        <h3>Witty A</h3>
-        <label for="xi">This is a very short Q</label><br/>
-        <input id="xi" type="text" oninput="changed('xi','xa','x','y')"/>
-        <span id="xa" class="h">👍 4M</span>
+        <h3>Dangerous Fashion</h3>
+        <label for="xi">The (now) most famous German former model's insta recently featured a jacket made of a certain animal.. which one?</label><br/>
+        <input id="xi" type="text" oninput="changed('xi','xa','snake','y')"/>
+        <span id="xa" class="h a">👍 4M</span>
     </div>
     <div class="q h" id="y">
-        <h3>Dance Dane Dance</h3>
-        <label for="yi">This is a medium sized Q. It will probably break the layout?</label><br/>
-        <input id="yi" type="text" oninput="changed('yi','ya','y','z')"/>
-        <span id="ya" class="h">🦆 4C</span>
+        <h3>From the "Infinite Times Played" Department </h3>
+        <label for="yi">This Baltimorean band has a hit we both like.. what is its second most popular song according to Spotify?</label><br/>
+        <input id="yi" type="text" oninput="changed('yi','ya','regret','z')"/>
+        <span id="ya" class="h a">🦆 4C</span>
     </div>
     <div class="q h" id="z">
-        <h3>Almost there..</h3>
-        <label for="zi">This is a super long Q !!! What if the Q has to be super long and there is no other way to type
-            it? This is what it will look like..</label><br/>
-        <input id="zi" type="text" oninput="changed('zi','za','z', 'final')"/>
-        <span id="za" class="h">❤️ XM</span>
+        <h3>It's everywhere</h3>
+        <label for="zi">Walk from your apartment building towards Alfa's Gassi area. Somewhere on that street is a house with a door that has a Peng drawing with two words next to it. What are they? (Ask for color hint if too difficult)</label><br/>
+        <input id="zi" type="text" oninput="changed('zi','za','mea culpa','final')"/>
+        <span id="za" class="h a">❤️ XM</span>
     </div>
     <div class="q h" id="final">
-        <h3>The Finale (for now..)</h3>
+        <h3>The Finale (..for now :D)</h3>
         <label for="finali">So.. what if we combine it all: "👍🦆+❤️ Frankfurt"</label><br/>
-        <input id="finali" type="text" oninput="changed('finali','finala','4M4C+XM Frankfurt', 'final')"/>
-        <span id="finala" class="h">🥳 "4M4C+XM Frankfurt" !! I heard Google made its own map coordinate system..</span>
+        <input id="finali" type="text" oninput="changed('finali','finala','4M4C+XM Frankfurt','final')"/>
+        <span id="finala" class="h b">🥳 "4M4C+XM Frankfurt" !!<br/><br/>.. I heard Google made its own map coordinate system..</span>
     </div>
 </div>
 <script>
