@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+    <title>Ho Ho Ho Hoooooo 🎅</title>
+    <style>
+        body {
+            background: black;
+            font-family: "Arial Black", serif;
+            font-size: 2em;
+        }
+
+        input {
+            margin-top: 30px;
+            height: 50px;
+            font-family: "Arial", serif;
+            font-size: 0.3em;
+            font-style: italic;
+            border: 5px dashed #f3c14c;
+            color: #212d2c;
+        }
+
+        h3 {
+            text-decoration: underline;
+            color: green;
+        }
+
+        .c {
+            flex-direction: column;
+        }
+
+        .q {
+            background: #00750a;
+            color: #666666;
+            font-family: "Arial", serif;
+            border: 10px dotted #ff0000;
+            padding: 0 20px 20px;
+            margin: 20px;
+        }
+
+        .h {
+            opacity: 0;
+        }
+
+        .a {
+            color: floralwhite;
+        }
+
+        .b {
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+<div class="c">
+    <div class="q" id="x">
+        <h3>Ich bin der Grinch! Ich hab euch euren Baumschmuck geklaut! >:·D</h3>
+        <label for="xi">.. und wenn ihr Weihnachten (und Bob's Baum) retten wollt, müsst ihr mir alle Fragen korrekt beantworten! Los Geht's!!! Wer ist das coolste Team in SD-Depot?<br/></label><br/>
+        <input id="xi" type="text" oninput="changed('xi','xa','BobRoss','y')"/>
+        <span id="xa" class="h a">🎄 Yippiii</span>
+    </div>
+    <div class="q h" id="y">
+        <h3>Zu einfach! Nächste Frage!</h3>
+        <label for="yi">Welche aktuelle Plattform-Initiative könnte auch auf dieser Seite dafür sorgen ohne Kopfschmerzen heute nach Hause zu gehen?</label><br/>
+        <input id="yi" type="text" oninput="changed('yi','ya','Barrierefreiheit','z')"/>
+        <span id="ya" class="h a">🎅 Tanz den</span>
+    </div>
+    <div class="q h" id="z">
+        <h3>Aus der Kategorie: Ich schreibe 2min eine Nachricht und reflektiere 5min über meine Emotionen dazu</h3>
+        <label for="zi">Wie emotiert man unseren Scrummeister beim pfostieren auf BedeutenMeist?</label><br/>
+        <input id="zi" type="text" oninput="changed('zi','za',':manuel_kiss:','final')"/>
+        <span id="za" class="h a">☃️ Doppel Mango Tango</span>
+    </div>
+    <div class="q h" id="final">
+        <h3>Und jetzt.. das große Finale!!1 >:·D</h3>
+        <label for="finali">Aaalso.. wenn ihr alles kombiniert, habt ihr die Geheimphrase, die ihr einem Bobby sagen könnt, um die nächste Station zu finden: "🎅☃️🎄 Kayayyy"</label><br/>
+        <input id="finali" type="text" oninput="changed('finali','finala','Tanz den Doppel Mango Tango Yippiii Kayayyy','final')"/>
+        <span id="finala" class="h b">🥳🎅🎄 💃 🕺</span>
+    </div>
+</div>
+<script>
+    function changed(iId, aId, correctAnswer, nQ) {
+        let typedA = document.getElementById(iId);
+        if (typedA.value.toLowerCase() === correctAnswer.toLowerCase()) {
+            typedA.disabled = 'true';
+            show(aId);
+            show(nQ);
+            final();
+        }
+    }
+
+    function final() {
+        if (Array.from(document.getElementsByClassName('q')).every(x => x.style.opacity === 'unset')) {
+            show('final');
+        }
+    }
+
+    function show(elementId) {
+        document.getElementById(elementId).style.opacity = 'unset';
+    }
+</script>
+</body>
+</html>
