@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- White background with black border -->
+  <rect width="200" height="200" fill="white"/>
+  <rect width="200" height="200" fill="none" stroke="black" stroke-width="3"/>
+  
+  <!-- Black line above the characters -->
+  <line x1="6" y1="25" x2="194" y2="25" stroke="black" stroke-width="12"/>
+  
+  <!-- Left character 한 in Korean flag red -->
+  <text x="60" y="120" font-family="Arial, sans-serif" font-size="150" font-weight="bold" fill="#C8102E" text-anchor="middle" dominant-baseline="middle">한</text>
+  
+  <!-- Right character 글 in Korean flag blue -->
+  <text x="140" y="120" font-family="Arial, sans-serif" font-size="150" font-weight="bold" fill="#003478" text-anchor="middle" dominant-baseline="middle">글</text>
+  
+  <!-- Black line below the characters -->
+  <line x1="6" y1="175" x2="194" y2="175" stroke="black" stroke-width="12"/>
+</svg>
