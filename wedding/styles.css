@@ -192,7 +192,7 @@ h1 {
 .hotel-table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 520px;
+  table-layout: fixed;
 }
 
 .hotel-table th,
@@ -200,12 +200,37 @@ h1 {
   text-align: left;
   padding: 0.55rem 0.45rem;
   border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  overflow-wrap: anywhere;
 }
 
 .hotel-table th {
   color: var(--blue-dark);
   font-size: 0.92rem;
   letter-spacing: 0.01em;
+}
+
+@media (max-width: 640px) {
+  .hotel-table th,
+  .hotel-table td {
+    padding: 0.45rem 0.3rem;
+    font-size: 0.88rem;
+  }
+
+  .hotel-table th:nth-child(1),
+  .hotel-table td:nth-child(1) {
+    width: 38%;
+  }
+
+  .hotel-table th:nth-child(2),
+  .hotel-table td:nth-child(2) {
+    width: 30%;
+  }
+
+  .hotel-table th:nth-child(3),
+  .hotel-table td:nth-child(3) {
+    width: 32%;
+  }
 }
 
 .footer {
